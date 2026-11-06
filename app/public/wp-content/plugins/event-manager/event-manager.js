@@ -1,0 +1,1 @@
+alert ('Event Manager plugin is active!');
