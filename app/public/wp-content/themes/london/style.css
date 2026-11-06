@@ -1,8 +1,10 @@
 /*
 Theme Name: London
 Author: Miki
+Version: 1.0
 */
 
-{
-    background
+body {
+    background-color: #000000;
+    color: #ffffff;
 }
