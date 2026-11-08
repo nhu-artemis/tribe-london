@@ -4,11 +4,72 @@ Author: Miki
 Version: 1.0
 */
 
-body {
+/* body {
     background-color: #000000;
     color: #ffffff;
+} */
+
+@font-face {
+    font-family: 'Coign Pro';
+    src: url('fonts/CoignPro-44Regular/CoignPro-44Regular.woff2') format('woff2'),
+         url('fonts/CoignPro-44Regular/CoignPro-44Regular.woff') format('woff'),
+         url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff2') format('woff2'),
+         url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff') format('woff'),
+         url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff2') format('woff2'),
+         url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff') format('woff'),
+         url('fonts/CoignPro-47Bold/CoignPro-47bold.woff2') format('woff2'),
+         url('fonts/CoignPro-47Bold/CoignPro-47bold.woff') format('woff'),
+}
+
+body {
+    font-family: 'Coign Pro', sans-serif;
 }
 
 .header-menu-class {
     background-color: #e78787
+}
+
+.title {
+    color: var(--Neutral-Darkest, #000);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Tanker;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.sub-title-1 {
+    color: var(--Main-Pink, #F08487);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Coign Pro";
+    font-size: 12.93863rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.sub-title-2 {
+    color: var(--Main-Pink, #F08487);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Coign Pro";
+    font-size: 12.93863rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.description {
+    color: var(--Neutral-Darkest, #000);
+    font-family: "GT America Mono";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
