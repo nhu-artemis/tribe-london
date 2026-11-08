@@ -4,21 +4,46 @@ Author: Miki
 Version: 1.0
 */
 
-/* body {
-    background-color: #000000;
-    color: #ffffff;
-} */
-
 @font-face {
     font-family: 'Coign Pro';
     src: url('fonts/CoignPro-44Regular/CoignPro-44Regular.woff2') format('woff2'),
-         url('fonts/CoignPro-44Regular/CoignPro-44Regular.woff') format('woff'),
-         url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff2') format('woff2'),
-         url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff') format('woff'),
-         url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff2') format('woff2'),
-         url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff') format('woff'),
-         url('fonts/CoignPro-47Bold/CoignPro-47bold.woff2') format('woff2'),
-         url('fonts/CoignPro-47Bold/CoignPro-47bold.woff') format('woff'),
+         url('fonts/CoignPro-44Regular/CoignPro-44Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Coign Pro';
+    src: url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff2') format('woff2'),
+         url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Coign Pro';
+    src: url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff2') format('woff2'),
+         url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Coign Pro';
+    src: url('fonts/CoignPro-47Bold/CoignPro-47bold.woff2') format('woff2'),
+         url('fonts/CoignPro-47Bold/CoignPro-47bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Tanker';
+    src: url('fonts/Tanker-Regular/Tanker-Regular.woff2') format('woff2'),
+         url('fonts/Tanker-Regular/Tanker-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GT America Mono';
+    src: url('/fonts/GT America Mono Regular/GT America MonoRegular.woff2') format('woff2'),
+         url('/fonts/GT America Mono Regular/GT America MonoRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Trade Gothic Next LT Pro';
+    src: url('/fonts/Trade Gothic Next LT Pro BdCn/Trade Gothic Next LT Pro BdCn.woff2') format('woff2'),
+         url('/fonts/Trade Gothic Next LT Pro BdCn/Trade Gothic Next LT Pro BdCn.woff') format('woff');
 }
 
 body {
@@ -26,7 +51,44 @@ body {
 }
 
 .header-menu-class {
-    background-color: #e78787
+    background-color: #e78787;
+}
+
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.sub-wrapper {
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+}
+
+.text-wrapper {
+    display: flex;
+    padding: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    align-self: stretch;
+    background: var(--Neutral-Lightest, #FFF);
+}
+
+.gallery-wrapper {
+    display: flex;
+    padding: 0.1875rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.1875rem;
+    flex: 1 0 0;
 }
 
 .title {
@@ -41,7 +103,7 @@ body {
     text-transform: uppercase;
 }
 
-.sub-title-1 {
+.sub-title {
     color: var(--Main-Pink, #F08487);
     leading-trim: both;
     text-edge: cap;
@@ -51,25 +113,39 @@ body {
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-}
 
-.sub-title-2 {
-    color: var(--Main-Pink, #F08487);
-    leading-trim: both;
-    text-edge: cap;
-    font-family: "Coign Pro";
-    font-size: 12.93863rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
+    line-height: 0.85;
 }
 
 .description {
     color: var(--Neutral-Darkest, #000);
-    font-family: "GT America Mono";
+    font-family: 'GT America Mono', monospace; 
     font-size: 1rem;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.5; /* Improved readability for body text */
+}
+
+
+
+.event-gallery-1 {
+    display: flex;
+    height: 20rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.1875rem;
+    align-self: stretch;
+}
+
+.event-gallery-2 {
+    display: flex;
+    height: 20rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.1875rem;
+    align-self: stretch;
+}
+
+.gallery-photo {
+    width: 35rem;
+    align-self: stretch;
 }
