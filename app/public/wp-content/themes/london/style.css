@@ -36,8 +36,8 @@ Version: 1.0
 
 @font-face {
     font-family: 'GT America Mono';
-    src: url('/fonts/GT America Mono Regular/GT America MonoRegular.woff2') format('woff2'),
-         url('/fonts/GT America Mono Regular/GT America MonoRegular.woff') format('woff');
+    src: url('fonts/GT-America-Mono-Regular/GT-America-Mono-Regular.woff2') format('woff2'),
+         url('fonts/GT-America-Mono-Regular/GT-America-Mono-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -54,10 +54,17 @@ body {
     background-color: #e78787;
 }
 
+.logo {
+    width: 1.49906rem;
+    height: 1.5rem;
+    aspect-ratio: 23.99/24.00;
+}
+
 .hero-container {
     display: flex;
     align-items: flex-start;
     align-self: stretch;
+    background: var(--Neutral-Darkest, #000);
 }
 
 .sub-wrapper {
@@ -81,6 +88,13 @@ body {
     background: var(--Neutral-Lightest, #FFF);
 }
 
+.title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .gallery-wrapper {
     display: flex;
     padding: 0.1875rem 0;
@@ -93,8 +107,8 @@ body {
 
 .title {
     color: var(--Neutral-Darkest, #000);
-    leading-trim: both;
-    text-edge: cap;
+    /* leading-trim: both;
+    text-edge: cap; */
     font-family: Tanker;
     font-size: 2rem;
     font-style: normal;
@@ -105,8 +119,8 @@ body {
 
 .sub-title {
     color: var(--Main-Pink, #F08487);
-    leading-trim: both;
-    text-edge: cap;
+    /* leading-trim: both;
+    text-edge: cap; */
     font-family: "Coign Pro";
     font-size: 12.93863rem;
     font-style: normal;
@@ -122,10 +136,8 @@ body {
     font-family: 'GT America Mono', monospace; 
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5; /* Improved readability for body text */
+    line-height: 1.5;
 }
-
-
 
 .event-gallery-1 {
     display: flex;
