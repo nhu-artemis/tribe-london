@@ -202,3 +202,31 @@ body {
     color: var(--Neutral-Light, #F3EEE8);
     text-decoration: none;
 }
+
+.section-wrapper {
+    position: relative;
+    z-index: 0;
+}
+
+.section-background {
+    --cell: 12px;
+    padding: 24px;
+    background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0) 0 0 / calc(var(--cell) * 8) calc(var(--cell) * 2);
+}
+
+.section-text {
+    color: var(--Neutral-Darkest, #000);
+    text-align: center;
+    font-family: "GT America Mono";
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 1;
+}
+
+.section-container {
+    position: relative;
+    background: var(--Neutral-Lightest, #FFF);
+    padding: 5rem;
+}
