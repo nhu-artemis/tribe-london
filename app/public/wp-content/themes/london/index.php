@@ -7,17 +7,17 @@
 <?php wp_head(); ?>
 </head>
 <body>
-<h1><?php bloginfo( 'name' ); ?></h1>
-<h2><?php bloginfo( 'description' ); ?></h2>
+<!-- <h1><?php bloginfo( 'name' ); ?></h1>
+<h2><?php bloginfo( 'description' ); ?></h2> -->
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php get_header(); ?>
-<?php the_title(); ?></h3>
+<!-- <?php the_title(); ?></h3> -->
 
 
 <?php the_content(); ?>
-<?php wp_link_pages(); ?>
-<?php edit_post_link(); ?> 
+<!-- <?php wp_link_pages(); ?> -->
+<!-- <?php edit_post_link(); ?>  -->
 
 <?php endwhile; ?>
 

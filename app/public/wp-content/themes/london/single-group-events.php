@@ -13,7 +13,6 @@ $auto_location = get_field('event_location');
             <h1 class="event-title"><?php the_title(); ?></h1>
             
             <div class="event-meta">
-
                 <?php if ( $auto_location ) : ?>
                     <span class="event-location"><?php echo $auto_location; ?></span>
                 <?php endif; ?>
