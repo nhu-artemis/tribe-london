@@ -28,22 +28,22 @@ $event_description = get_field('event-description');
         <div class="menu-tabs">
             <div class="menu-tabs-container">
                 <?php
-                $taxonomy = 'event'; 
-                $terms = get_terms( array(
-                    'taxonomy'   => $taxonomy,
-                ) );
+                    $taxonomy = 'event'; 
+                    $terms = get_terms( array(
+                        'taxonomy'   => $taxonomy,
+                    ) );
 
-                if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : 
-                    
-                    echo '<a href="#" class="all-menu-tab">All</a>';
-                    
-                    foreach ( $terms as $term ) : ?>
-                        <a href="#<?php echo esc_attr( $term->slug ); ?>" class="menu-tab">
-                            <?php echo esc_html( $term->name ); ?>
-                        </a>
-                    <?php endforeach; 
-                    
-                endif; 
+                    if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : 
+                        
+                        echo '<a href="#" class="menu-tab" class="all-menu-tab" data-filter="all">All</a>';
+                        
+                        foreach ( $terms as $term ) : ?>
+                            <a href="#" class="menu-tab" data-filter="<?php echo esc_attr( $term->slug ); ?>" >
+                                <?php echo esc_html( $term->name ); ?>
+                            </a>
+                        <?php endforeach; 
+                        
+                    endif; 
                 ?>
             </div>
         </div>
@@ -52,20 +52,27 @@ $event_description = get_field('event-description');
             <?php
                 $args = array(
                     'post_type'      => 'event',
-                    'posts_per_page' => 10,
-                    'tax_query' => array (
-                        array(
-                            'taxonomy' => 'event',
-                            'field' => 'slug',
-                            'terms' => array('fb-programming')
-                        )
-                    )
+                    'posts_per_page' => -1,
+                    // 'tax_query' => array (
+                    //     array(
+                    //         'taxonomy' => 'event',
+                    //         'field' => 'slug',
+                    //         'terms' => array('fb-programming')
+                    //     )
+                    // )
                 );
                 $loop = new WP_Query($args);
                 while ( $loop->have_posts() ) {
                     $loop->the_post();
+
+                    $post_terms = wp_get_post_terms(get_the_ID(), 'event');
+                    $term_slugs = array();
+                    foreach ($post_terms as $pt) {
+                        $term_slugs[] = $pt -> slug;
+                    }
+                    $slug_string = implode(' ', $term_slugs);
                     ?>
-                    <div class="content-card">
+                    <div class="content-card event-item" data-category="<?php echo esc_attr( $slug_string ); ?>">
                         <div class="event-frame">
                             <div class="calendar-frame">
                                 <div class="event-year"><?php echo esc_html(get_field('event-year'))?></div>
@@ -75,15 +82,18 @@ $event_description = get_field('event-description');
                             <div class="content-card">
                                 <div class="event-title-frame">
                                     <div class="event-title"><?php the_title(); ?></div>
-                                    <div class="event-subtitle"><?php echo($event_subtitle) ?></div>
+                                    <div class="event-subtitle"><?php echo esc_html( get_field('event-subtitle') ); ?></div>
                                     
                                 </div>
-                                <div class="event-description"><?php echo($event_description) ?></div>
+                                <div class="event-description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
                             </div>
                         </div>
+                    </div>
                     <?php
                 }
+                wp_reset_postdata()
             ?>
         </div>
     </div>
 </div>
+

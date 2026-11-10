@@ -401,3 +401,11 @@ body {
     align-items: center;
     gap: 1rem;
 }
+
+.event-item.hidden {
+    display: none !important;
+}
+
+.menu-tab.active {
+    background: var(--Main-Pink, #F08487);
+}
