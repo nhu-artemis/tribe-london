@@ -230,3 +230,174 @@ body {
     background: var(--Neutral-Lightest, #FFF);
     padding: 5rem;
 }
+
+.event-wrapper {
+    background: var(--Neutral-Light, #F3EEE8);
+    padding: 5rem;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: stretch;
+}
+
+.event-card {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex: 1 0 0;
+}
+
+.image-placeholder {
+    height: 25.6875rem;
+    align-self: stretch;
+    aspect-ratio: 613/409;
+}
+
+.event-title-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+}
+
+.event-title {
+    color: var(--Main-Pink, #F08487);
+    font-family: Tanker;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.event-subtitle {
+    color: var(--Neutral-Darkest, #000);
+    font-family: "GT America Mono";
+    font-size: var(--Text-Sizes-Text-Small, 0.875rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+}
+
+.event-description {
+    color: var(--Neutral-Darkest, #000);
+    font-family: "GT America Mono";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.5rem */
+    text-transform: uppercase;
+}
+
+.event-card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    align-self: stretch;
+}
+
+.event-frame {
+    display: flex;
+    gap: 2rem;
+}
+
+.calendar-frame {
+    background: var(--Neutral-Darkest, #000);
+    display: flex;
+    padding: 0.5rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-year {
+    color: var(--Neutral-Lightest, #FFF);
+    font-family: "GT America Mono";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.125rem */
+    text-transform: uppercase;
+    align-self: flex-end;
+}
+
+.event-date {
+    color: var(--Neutral-Lightest, #FFF);
+    font-family: Tanker;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 2.25rem */
+    text-transform: uppercase;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.event-time {
+    color: var(--Neutral-Lightest, #FFF);
+    font-family: "GT America Mono";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.125rem */
+    text-transform: uppercase;
+    align-self: flex-end;
+}
+
+.menu-tabs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-tabs-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    color: var(--Neutral-Darkest, #000);
+    font-family: Tanker;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.62475rem; /* 108.315% */
+}
+
+.all-menu-tab {
+    border: 2px solid var(--Neutral-Darkest, #000);
+    background: var(--Main-Pink, #F08487);
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    color: var(--Neutral-Darkest, #000);
+    font-family: Tanker;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.62475rem; /* 108.315% */
+}
+
+.menu-tab {
+    border: 2px solid var(--Neutral-Dark, #605A5B);
+    color: var(--Neutral-Darkest, #000);
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+}

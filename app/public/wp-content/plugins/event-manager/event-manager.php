@@ -15,7 +15,7 @@ function event_custom_post_type() {
     register_post_type('event',
         array(
             'labels' => array(
-                'name' => __('Events', 'textdomain'),
+                'name' => __('Custom Event Post Type', 'textdomain'),
                 'singular_name' => __('Event', 'textdomain')
             ),
             'public' => true,
@@ -31,7 +31,7 @@ function event_custom_taxonomy() {
     $labels = array(
         'name'          => 'Events Categories',
         'singular_name' => 'Event',
-        'menu_name'     => 'Events',
+        'menu_name'     => 'Categories',
         'all_items'     => 'All Events',
         'edit_item'     => 'Edit Event',
         'view_item'     => 'View Event',

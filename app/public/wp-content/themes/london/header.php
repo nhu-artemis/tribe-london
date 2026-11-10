@@ -1,7 +1,3 @@
-
-
-
-
 <section class="nav-bar">
     <div class="logo-container">
         <img src="http://tribe-london.local/wp-content/uploads/2026/11/Logo.svg">

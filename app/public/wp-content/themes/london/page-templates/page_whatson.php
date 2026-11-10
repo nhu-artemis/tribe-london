@@ -26,4 +26,5 @@
     <?php the_content(); ?>
     <?php get_template_part( 'template-parts/hero' ); ?>
     <?php get_template_part( 'template-parts/section' ); ?>
+    <?php get_template_part( 'template-parts/event' ); ?>
 <?php endwhile; ?>
