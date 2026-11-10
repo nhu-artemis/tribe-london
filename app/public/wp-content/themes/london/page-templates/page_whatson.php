@@ -4,7 +4,6 @@
  */
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,4 +20,7 @@
     <?php get_template_part( 'part-templates/hero' ); ?>
     <?php get_template_part( 'part-templates/section' ); ?>
     <?php get_template_part( 'part-templates/event' ); ?>
+    <?php get_template_part( 'part-templates/how-to-section' )?>
+    <?php get_template_part( 'part-templates/contact' )?>
+    <?php get_template_part( 'part-templates/newsletter' )?>
 <?php endwhile; ?>

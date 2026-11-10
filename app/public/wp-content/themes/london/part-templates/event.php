@@ -83,10 +83,10 @@ $event_description = get_field('event-description');
                                 <div class="event-title-frame">
                                     <div class="event-title"><?php the_title(); ?></div>
                                     <div class="event-subtitle"><?php echo esc_html( get_field('event-subtitle') ); ?></div>
-                                    
                                 </div>
                                 <div class="event-description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
                             </div>
+                            <button href="#" class="learn-more-button"><p class="button-text">Learn More</p></button>
                         </div>
                     </div>
                     <?php
