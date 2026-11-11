@@ -575,6 +575,8 @@ body {
     box-sizing: border-box;
     width: 400px;                 
     max-width: 100%;
+    position: relative;
+    justify-content: center;
     padding: 5px 5px; 
     background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0)
                 0 0 / calc(var(--cell-w) * 2) calc(var(--cell-h) * 2);
@@ -584,45 +586,44 @@ body {
     background: var(--Neutral-Light, #F3EEE6);
 }
 
+
+
 .newsletter-action-container .forminator-edit-module {
     display: none !important;
 }
 
-.newsletter-action-container .input-field {
-    height: 50px;
-    display: flex;
-}
 
-.newsletter-action-container form.forminator-ui {
+.newsletter-action-frame form.forminator-ui {
     display: flex !important;
 }
 
-.newsletter-action-container form.forminator-ui .forminator-row,
-.newsletter-action-container form.forminator-ui .forminator-col,
-.newsletter-action-container form.forminator-ui .forminator-field {
+.newsletter-action-frame form.forminator-ui .forminator-row,
+.newsletter-action-frame form.forminator-ui .forminator-col,
+.newsletter-action-frame form.forminator-ui .forminator-field {
     display: flex;
     align-items: stretch;
 }
 
-.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input,
-.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input:hover,
-.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input:focus,
-.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input:focus-visible {
+.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input,
+.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input:hover,
+.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input:focus,
+.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input:focus-visible {
     border: 2px solid var(--Neutral-Darkest, #1a1a1a) !important;
     box-sizing: border-box;
+    width: 18rem;
+    height: 3rem;
 }
 
-/* Email input */
-.newsletter-action-background .forminator-input {
+
+/* .newsletter-action-frame input.forminator-input {
     height: 100% !important;
     padding: 0 1rem !important;  
     border: 2px solid var(--Neutral-Darkest, #000);
-background: var(--Neutral-Light, #F3EEE8);
-    width: 18rem;
-}
+    background: var(--Neutral-Light, #F3EEE8);
+    
+} */
 
-/* Subscribe button */
-.newsletter-action-container form.forminator-ui button.forminator-button-submit {
+.newsletter-action-frame form.forminator-ui button.forminator-button-submit {
     height: 100% !important;
     padding: 0 1.2rem !important; 
     border: 2px solid var(--Neutral-Darkest, #1a1a1a) !important;
@@ -636,6 +637,22 @@ background: var(--Neutral-Light, #F3EEE8);
     line-height: normal;
 }
 
-.newsletter-action-background div.forminator-ui {
+.newsletter-action-frame div.forminator-ui {
     display: none !important;
 }
+
+.newsletter-action-frame .forminator-response-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: var(--Neutral-Light, #F3EEE8);
+    width: 100%;
+    font-family: "GT America Mono";
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+

@@ -17,7 +17,7 @@ $description = get_field('newsletter-description')
         
         <div class="newsletter-action-container">
             <div class="newsletter-action-background">
-               <div><?php echo do_shortcode( '[forminator_form id="210"]' ); ?></div>
+               <div class="newsletter-action-frame"><?php echo do_shortcode( '[forminator_form id="210"]' ); ?></div>
             </div>
         </div>
     </div>
