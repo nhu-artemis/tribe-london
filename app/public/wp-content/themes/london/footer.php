@@ -4,9 +4,6 @@ $footer_title = get_field('footer-title');
 $footer_description = get_field('footer-description');
 $policy = get_field('newsletter-policy');
 $tagline = get_field('credits-tagline');
-$credit_menu1 = get_field('privacy-policy');
-$credit_menu2 = get_field('terms-of-service');
-$credit_menu3 = get_field('cookie-settings');
 ?>
 
 <section class="footer-navbar">
@@ -23,8 +20,8 @@ $credit_menu3 = get_field('cookie-settings');
                     // Display the navigation menu for the footer
                     wp_nav_menu( 
                         array( 
-                            'theme_location' => 'footer-menu',
-                            'container_class' => 'footer-menu-class'
+                            'theme_location' => 'header-menu',
+                            'container_class' => 'header-menu-class'
                         ) 
                     );
                 ?>
@@ -56,11 +53,16 @@ $credit_menu3 = get_field('cookie-settings');
 
 <section class="footer-credits">
     <div class="footer-credits-row">
-        <div class="footer-container">
+        <div class="footer-credits-container">
             <div class="tagline"><?php echo $tagline; ?></div>
-            <div class="tagline"><?php echo $credit_menu1; ?></div>
-            <div class="tagline"><?php echo $credit_menu2; ?></div>
-            <div class="tagline"><?php echo $credit_menu3; ?></div>
+            <?php
+                wp_nav_menu( 
+                    array(
+                        'theme_location' => 'credits-menu', 
+                        'container_class' => 'credit-menu-class'
+                    ) 
+                );
+            ?>
         </div>
         <div class="social-link">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/Facebook.png' ); ?>" alt="Facebook">

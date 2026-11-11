@@ -790,7 +790,7 @@ body {
     align-self: stretch;
 }
 
-.footer-container {
+.footer-credits-container {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -803,6 +803,29 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.credit-menu-class ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-credits-container a {
+    color: var(--Neutral-Light, #F3EEE8);
+    font-family: "GT America Mono";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
 }
 
 .social-link {
