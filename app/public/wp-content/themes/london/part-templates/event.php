@@ -72,21 +72,21 @@ $event_description = get_field('event-description');
                     }
                     $slug_string = implode(' ', $term_slugs);
                     ?>
-                    <div class="content-card event-item" data-category="<?php echo esc_attr( $slug_string ); ?>">
+                    <div class="content-tab-card event-item" data-category="<?php echo esc_attr( $slug_string ); ?>">
                         <div class="event-frame">
                             <div class="calendar-frame">
                                 <div class="event-year"><?php echo esc_html(get_field('event-year'))?></div>
                                 <div class="event-date"><?php echo esc_html(get_field('event-start'))?>-<?php echo esc_html(get_field('event-end'))?></div>
                                 <div class="event-time"><?php echo esc_html(get_field('event-time'))?></div>
                             </div>
-                            <div class="content-card">
+                            <div class="content-tab-card">
                                 <div class="event-title-frame">
                                     <div class="event-title"><?php the_title(); ?></div>
                                     <div class="event-subtitle"><?php echo esc_html( get_field('event-subtitle') ); ?></div>
                                 </div>
-                                <div class="event-description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
+                                <div class="event-tab-description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
                             </div>
-                            <button href="#" class="learn-more-button"><p class="button-text">Learn More</p></button>
+                            <a href="#" class="learn-more-button"><p class="button-text">Learn More</p></a>
                         </div>
                     </div>
                     <?php

@@ -15,8 +15,8 @@ $description = get_field('newsletter-description')
             <div class="newsletter-description"><?php echo nl2br($description); ?></div>
         </div>
         
-        <div class="newsletter-action-container">
-            <div class="newsletter-action-background">
+        <div class="newsletter-action-background">
+            <div class="newsletter-action-container">
                <div class="newsletter-action-frame">
                     <form id="custom-newsletter-form" class="custom-form-layout">
                         <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required />

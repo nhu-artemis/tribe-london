@@ -23,4 +23,5 @@
     <?php get_template_part( 'part-templates/how-to-section' )?>
     <?php get_template_part( 'part-templates/contact' )?>
     <?php get_template_part( 'part-templates/newsletter' )?>
+<?php get_footer() ?>
 <?php endwhile; ?>
