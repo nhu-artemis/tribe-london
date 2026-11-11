@@ -587,72 +587,56 @@ body {
 }
 
 
-
-.newsletter-action-container .forminator-edit-module {
-    display: none !important;
-}
-
-
-.newsletter-action-frame form.forminator-ui {
-    display: flex !important;
-}
-
-.newsletter-action-frame form.forminator-ui .forminator-row,
-.newsletter-action-frame form.forminator-ui .forminator-col,
-.newsletter-action-frame form.forminator-ui .forminator-field {
+.newsletter-action-frame form.custom-form-layout {
     display: flex;
     align-items: stretch;
+    width: 100%;
 }
 
-.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input,
-.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input:hover,
-.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input:focus,
-.newsletter-action-frame form.forminator-ui .forminator-field input.forminator-input:focus-visible {
-    border: 2px solid var(--Neutral-Darkest, #1a1a1a) !important;
+.newsletter-action-frame form.custom-form-layout input[type="email"],
+.newsletter-action-frame form.custom-form-layout input[type="email"]:hover,
+.newsletter-action-frame form.custom-form-layout input[type="email"]:focus,
+.newsletter-action-frame form.custom-form-layout input[type="email"]:focus-visible {
+    border: 2px solid var(--Neutral-Darkest, #1a1a1a);
     box-sizing: border-box;
     width: 18rem;
     height: 3rem;
+    padding: 0 1rem;
+    background: var(--Neutral-Light, #F3EEE8);
+    outline: none;
 }
 
-
-/* .newsletter-action-frame input.forminator-input {
-    height: 100% !important;
-    padding: 0 1rem !important;  
-    border: 2px solid var(--Neutral-Darkest, #000);
-    background: var(--Neutral-Light, #F3EEE8);
-    
-} */
-
-.newsletter-action-frame form.forminator-ui button.forminator-button-submit {
-    height: 100% !important;
-    padding: 0 1.2rem !important; 
-    border: 2px solid var(--Neutral-Darkest, #1a1a1a) !important;
-    background: #f28b8b !important;
+.newsletter-action-frame form.custom-form-layout button[type="submit"] {
+    box-sizing: border-box;
+    padding: 0 1.2rem; 
+    border: 2px solid var(--Neutral-Darkest, #1a1a1a);
+    background: #f28b8b;
     text-transform: uppercase;
     cursor: pointer;
-    font-family: Tanker;
+    font-family: Tanker, sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
-.newsletter-action-frame div.forminator-ui {
-    display: none !important;
-}
 
-.newsletter-action-frame .forminator-response-message {
+.newsletter-action-frame #form-response-message {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+    margin-top: 5px; 
     text-align: center;
     background: var(--Neutral-Light, #F3EEE8);
+    border: 2px solid var(--Neutral-Darkest, #1a1a1a); 
     width: 100%;
-    font-family: "GT America Mono";
+    padding: 0.2rem 0; 
+    box-sizing: border-box;
+    font-family: "GT America Mono", monospace;
     font-size: 0.6rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    z-index: 10;
 }
-
