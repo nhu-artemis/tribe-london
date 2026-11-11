@@ -14,9 +14,10 @@ $description = get_field('newsletter-description')
             <div class="newsletter-title"><?php echo $title; ?></div>
             <div class="newsletter-description"><?php echo nl2br($description); ?></div>
         </div>
-        <div class="newsletter-action-background">
-            <div class="newsletter-action-container">
-               <div class="input-field"><?php echo do_shortcode( '[forminator_form id="210"]' ); ?></div>
+        
+        <div class="newsletter-action-container">
+            <div class="newsletter-action-background">
+               <div><?php echo do_shortcode( '[forminator_form id="210"]' ); ?></div>
             </div>
         </div>
     </div>

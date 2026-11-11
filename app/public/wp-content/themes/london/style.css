@@ -477,9 +477,7 @@ body {
 
 .contact-frame {
     background: var(--Neutral-Light, #F3EEE8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
     gap: 1rem;
 }
 
@@ -503,11 +501,29 @@ body {
     align-self: stretch;
 }
 
-.contact-tagline {
+.contact-title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    width: 80%;
+}
+
+.contact-title {
     color: var(--Neutral-Lightest, #FFF);
     text-align: center;
     font-family: Tanker;
     font-size: 3.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-description {
+    color: var(--Neutral-Lightest, #FFF);
+    text-align: center;
+    font-family: "GT America Mono";
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -524,12 +540,13 @@ body {
     justify-content: center;
     align-items: center;
     align-self: stretch;
+    padding: 2rem;
 }
 
 .newsletter-title-container {
     display: flex;
-    padding: 2rem;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .newsletter-title {
@@ -553,18 +570,17 @@ body {
 }
 
 .newsletter-action-background {
-    --cell: 5px;
+    --cell-w: 15px;
+    --cell-h: 5px;
     box-sizing: border-box;
-    width: 420px;                 
+    width: 400px;                 
     max-width: 100%;
-    padding: var(--cell);
+    padding: 5px 5px; 
     background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0)
-                0 0 / calc(var(--cell) * 2) calc(var(--cell) * 2);
+                0 0 / calc(var(--cell-w) * 2) calc(var(--cell-h) * 2);
 }
 
 .newsletter-action-container {
-    box-sizing: border-box;
-    height: 40px;
     background: var(--Neutral-Light, #F3EEE6);
 }
 
@@ -572,20 +588,13 @@ body {
     display: none !important;
 }
 
-
 .newsletter-action-container .input-field {
-    height: 40px;
+    height: 50px;
     display: flex;
 }
 
 .newsletter-action-container form.forminator-ui {
     display: flex !important;
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
-    align-items: stretch;
 }
 
 .newsletter-action-container form.forminator-ui .forminator-row,
@@ -593,34 +602,29 @@ body {
 .newsletter-action-container form.forminator-ui .forminator-field {
     display: flex;
     align-items: stretch;
-    margin: 0 !important;
-    padding: 0 !important;
-    min-width: 0;
 }
 
-.newsletter-action-container form.forminator-ui .forminator-field input.forminator-input,
-.newsletter-action-container form.forminator-ui .forminator-field input.forminator-input:hover,
-.newsletter-action-container form.forminator-ui .forminator-field input.forminator-input:focus,
-.newsletter-action-container form.forminator-ui .forminator-field input.forminator-input:focus-visible {
+.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input,
+.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input:hover,
+.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input:focus,
+.newsletter-action-background form.forminator-ui .forminator-field input.forminator-input:focus-visible {
     border: 2px solid var(--Neutral-Darkest, #1a1a1a) !important;
-    border-radius: 0 !important;
-    outline: none !important;
     box-sizing: border-box;
 }
 
 /* Email input */
-.newsletter-action-container .forminator-input {
+.newsletter-action-background .forminator-input {
     height: 100% !important;
     padding: 0 1rem !important;  
-    background: transparent !important;
-    width: 19.5rem;
+    border: 2px solid var(--Neutral-Darkest, #000);
+background: var(--Neutral-Light, #F3EEE8);
+    width: 18rem;
 }
 
 /* Subscribe button */
 .newsletter-action-container form.forminator-ui button.forminator-button-submit {
     height: 100% !important;
-    padding: 0 1.25rem !important; 
-    box-sizing: border-box;
+    padding: 0 1.2rem !important; 
     border: 2px solid var(--Neutral-Darkest, #1a1a1a) !important;
     background: #f28b8b !important;
     text-transform: uppercase;
@@ -630,4 +634,8 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.newsletter-action-background div.forminator-ui {
+    display: none !important;
 }
