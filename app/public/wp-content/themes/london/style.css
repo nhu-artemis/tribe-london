@@ -945,7 +945,7 @@ body {
     --cell-w: 15px;
     --cell-h: 5px;
     box-sizing: border-box;
-    width: 38rem;                 
+    width: 40rem;                
     height: 35rem;
     background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0)
                 0 0 / calc(var(--cell-w) * 2) calc(var(--cell-h) * 2);
@@ -962,13 +962,62 @@ body {
 .booking-info-text {
     display: flex;
     color: var(--Main-Pink, #F08487);
-    align-items: center;
+    justify-content: center;
     font-family: Tanker;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding-top: 8rem;
+    padding-top: 5rem;
 }
 
-.event-rule
+.event-ad-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+}
+
+.event-ad-frame .big-text {
+    color: var(--Neutral-Lightest, #FFF);
+    text-align: center;
+    font-family: Tanker;
+    font-size: 3.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    gap: 2.5rem;
+}
+
+.event-ad-frame .small-text {
+    color: var(--Neutral-Lightest, #FFF);
+    text-align: center;
+    font-family: "GT America Mono";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 2rem;
+}
+
+.rsvp-button {
+    display: flex;
+    width: 10rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.rsvp-button .text {
+    display: flex;
+    padding: 0.9375rem 1rem;
+    color: var(--Neutral-Darkest, #000);
+    font-family: Tanker;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
