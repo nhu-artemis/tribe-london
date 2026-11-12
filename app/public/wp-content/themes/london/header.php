@@ -1,6 +1,15 @@
+<?php
+/**
+ * Template part for displaying the header section
+ */
+$header_image = get_field('header-logo');
+?>
+
 <section class="header-navbar">
     <div class="logo-container">
-        <img src="http://tribe-london.local/wp-content/uploads/2026/11/Logo.svg">
+        <?php if( $header_image ): ?>
+            <img src="<?php the_field('header-logo'); ?>" />
+        <?php endif; ?>
     </div>
     <div class="header-menu-container">
         <div class="header-menu-item">
@@ -15,5 +24,4 @@
             ?>
         </div>
     </div>
-
 </section>
