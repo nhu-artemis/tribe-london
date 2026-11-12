@@ -45,7 +45,7 @@ function event_custom_taxonomy() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => ['slug' => 'event'],
+        'rewrite'           => ['slug' => 'whatson'],
     );
 
     register_taxonomy('event', array('event'), $args);

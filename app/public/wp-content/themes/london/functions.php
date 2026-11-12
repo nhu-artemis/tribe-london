@@ -17,6 +17,10 @@ function register_the_menus() {
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles_scripts' );
 
 function theme_enqueue_styles_scripts() {
+    wp_enqueue_style(
+      'london-style',
+      get_template_directory_uri() . '/style.css',
+    );
 
     wp_enqueue_script(
         'london-script',
