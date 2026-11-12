@@ -36,15 +36,14 @@ $tagline = get_field('credits-tagline');
                 <div class="newsletter-action-background">
                     <div class="newsletter-action-container">
                         <div class="newsletter-action-frame">
-                            <form id="custom-newsletter-form" class="custom-form-layout">
-                                <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required />
-                                <button type="submit" id="newsletter-submit-btn">SUBSCRIBE</button>
-                            </form>
-                            
-                            <div id="form-response-message" style="display:none"></div>
+                                <form class="custom-newsletter-form">
+                                    <input type="email" class="newsletter-email" name="email" placeholder="Enter your email" required />
+                                    <button type="submit" class="newsletter-submit-btn">SUBSCRIBE</button>
+                                </form> 
+                                <div class="form-response-message" style="display:none"></div>
                         </div>
                     </div>
-                </div>   
+                </div>  
                 <p class="newsletter-policy"><?php echo $policy; ?></p> 
             </div>   
         </div>           

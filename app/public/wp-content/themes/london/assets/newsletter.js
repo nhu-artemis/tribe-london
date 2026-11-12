@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('custom-newsletter-form');
-    const responseMessage = document.getElementById('form-response-message');
+    const forms = document.querySelectorAll('.custom-newsletter-form');
 
-    if (form) {
+    forms.forEach(function(form) {
         form.addEventListener('submit', async function(e) {
-            e.preventDefault(); // Stops the page from refreshing
+            // prevent the form from submitting URLs
+            e.preventDefault();
             
-            const emailInput = document.getElementById('newsletter-email').value;
-            const submitBtn = document.getElementById('newsletter-submit-btn');
+            const emailInput = form.querySelector('.newsletter-email').value;
+            const submitBtn = form.querySelector('.newsletter-submit-btn');
             
+            const wrapper = form.closest('.newsletter-wrapper') || form.parentElement;
+            const responseMessage = wrapper.querySelector('.form-response-message');
+
             submitBtn.textContent = 'SENDING...';
             submitBtn.disabled = true;
 
@@ -26,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 responseMessage.textContent = data.message;
 
                 if (data.success) {
-                    form.reset(); // Clear the form
+                    form.reset(); // clear the form
                     responseMessage.style.color = 'green';
                 } else {
                     responseMessage.style.color = 'red';
@@ -36,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 responseMessage.style.color = 'red';
                 responseMessage.textContent = 'A network error occurred. Please try again.';
             } finally {
-                // Reset the button
+                // reset the button
                 submitBtn.textContent = 'SUBSCRIBE';
                 submitBtn.disabled = false;
             }
         });
-    }
+    });
 });

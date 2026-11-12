@@ -606,16 +606,16 @@ body {
 }
 
 
-.newsletter-action-frame form.custom-form-layout {
+.newsletter-action-frame form.custom-newsletter-form {
     display: flex;
     align-items: stretch;
     width: 100%;
 }
 
-.newsletter-action-frame form.custom-form-layout input[type="email"],
-.newsletter-action-frame form.custom-form-layout input[type="email"]:hover,
-.newsletter-action-frame form.custom-form-layout input[type="email"]:focus,
-.newsletter-action-frame form.custom-form-layout input[type="email"]:focus-visible {
+.newsletter-action-frame form.custom-newsletter-form input[type="email"],
+.newsletter-action-frame form.custom-newsletter-form input[type="email"]:hover,
+.newsletter-action-frame form.custom-newsletter-form input[type="email"]:focus,
+.newsletter-action-frame form.custom-newsletter-form input[type="email"]:focus-visible {
     border: 2px solid var(--Neutral-Darkest, #1a1a1a);
     box-sizing: border-box;
     width: 18rem;
@@ -624,7 +624,7 @@ body {
     outline: none;
 }
 
-.newsletter-action-frame form.custom-form-layout button[type="submit"] {
+.newsletter-action-frame form.custom-newsletter-form button[type="submit"] {
     box-sizing: border-box;
     padding: 0 1.2rem; 
     border: 2px solid var(--Neutral-Darkest, #1a1a1a);
@@ -638,12 +638,12 @@ body {
     line-height: normal;
 }
 
-.newsletter-action-frame form.custom-form-layout button[type="submit"]:hover {
+.newsletter-action-frame form.custom-newsletter-form button[type="submit"]:hover {
     background: #948b8d;
 }
 
 
-.newsletter-action-frame #form-response-message {
+.newsletter-action-frame .form-response-message {
     position: absolute;
     top: 100%;
     left: 0;
