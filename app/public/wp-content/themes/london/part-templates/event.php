@@ -8,6 +8,10 @@ $event_image = get_field('event-image');
 $event_title = get_field('event-title');
 $event_subtitle = get_field('event-subtitle');
 $event_description = get_field('event-description');
+$event_year = get_field('event-year');
+$event_start = get_field('event-start');
+$event_end = get_field('event-end');
+$event_time = get_field('event-time');
 ?>
 
 <div class="event-wrapper">
@@ -25,7 +29,7 @@ $event_description = get_field('event-description');
             </div>
         </div>
 
-        <div class="menu-tabs">
+        <div class="menu-tabs-frame">
             <div class="menu-tabs-container">
                 <?php
                     $taxonomy = 'event'; 
@@ -35,7 +39,7 @@ $event_description = get_field('event-description');
 
                     if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : 
                         
-                        echo '<a href="#" class="menu-tab" class="all-menu-tab" data-filter="all">All</a>';
+                        echo '<a href="#" class="menu-tab" data-filter="all">All</a>';
                         
                         foreach ( $terms as $term ) : ?>
                             <a href="#" class="menu-tab" data-filter="<?php echo esc_attr( $term->slug ); ?>" >
@@ -75,9 +79,9 @@ $event_description = get_field('event-description');
                     <div class="content-tab-card event-item" data-category="<?php echo esc_attr( $slug_string ); ?>">
                         <div class="event-frame">
                             <div class="calendar-frame">
-                                <div class="event-year"><?php echo esc_html(get_field('event-year'))?></div>
-                                <div class="event-date"><?php echo esc_html(get_field('event-start'))?>-<?php echo esc_html(get_field('event-end'))?></div>
-                                <div class="event-time"><?php echo esc_html(get_field('event-time'))?></div>
+                                <div class="event-year"><?php echo $event_year?></div>
+                                <div class="event-date"><?php echo $event_start?>-<?php echo $event_end?></div>
+                                <div class="event-time"><?php echo $event_time?></div>
                             </div>
                             <div class="content-tab-card">
                                 <div class="event-title-frame">
@@ -86,7 +90,7 @@ $event_description = get_field('event-description');
                                 </div>
                                 <div class="event-tab-description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
                             </div>
-                            <a href="#" class="learn-more-button"><p class="button-text">Learn More</p></a>
+                            <a href="<?php the_permalink(); ?>" class="learn-more-button"><p class="button-text">Learn More</p></a>
                         </div>
                     </div>
                     <?php
