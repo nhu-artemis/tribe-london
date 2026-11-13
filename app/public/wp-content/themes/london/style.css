@@ -4,53 +4,6 @@ Author: Miki
 Version: 1.0
 */
 
-@font-face {
-    font-family: 'Coign Pro';
-    src: url('fonts/CoignPro-44Regular/CoignPro-44Regular.woff2') format('woff2'),
-         url('fonts/CoignPro-44Regular/CoignPro-44Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Coign Pro';
-    src: url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff2') format('woff2'),
-         url('fonts/CoignPro-45Medium/CoignPro-45Medium.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Coign Pro';
-    src: url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff2') format('woff2'),
-         url('fonts/CoignPro-46Semibold/CoignPro-46Semibold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Coign Pro';
-    src: url('fonts/CoignPro-47Bold/CoignPro-47bold.woff2') format('woff2'),
-         url('fonts/CoignPro-47Bold/CoignPro-47bold.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Tanker';
-    src: url('fonts/Tanker-Regular/Tanker-Regular.woff2') format('woff2'),
-         url('fonts/Tanker-Regular/Tanker-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'GT America Mono';
-    src: url('fonts/GT-America-Mono-Regular/GT-America-Mono-Regular.woff2') format('woff2'),
-         url('fonts/GT-America-Mono-Regular/GT-America-Mono-Regular.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Trade Gothic Next LT Pro';
-    src: url('/fonts/Trade Gothic Next LT Pro BdCn/Trade Gothic Next LT Pro BdCn.woff2') format('woff2'),
-         url('/fonts/Trade Gothic Next LT Pro BdCn/Trade Gothic Next LT Pro BdCn.woff') format('woff');
-}
-
-body {
-    font-family: 'Coign Pro', sans-serif;
-    margin: 0;
-}
-
 
 .logo {
     width: 1.49906rem;
