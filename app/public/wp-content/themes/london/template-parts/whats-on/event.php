@@ -11,23 +11,23 @@ $event_description = get_field('event-description');
 $icon = get_field('chevron-right'); 
 ?>
 
-<div class="event-wrapper">
-    <div class="event-container">
-        <div class="event-card">
+<div class="whatson-events">
+    <div class="whatson-events__inner">
+        <div class="whatson-featured">
             <?php if( $event_image ): ?>
-                <img class="image-placeholder" src="<?php the_field('event-image'); ?>" />
+                <img class="whatson-featured__image" src="<?php the_field('event-image'); ?>" />
             <?php endif; ?>
-            <div class="content-card">
-                <div class="event-title-frame">
-                    <div class="event-title"><?php echo ($event_title) ?></div>
-                    <div class="event-subtitle"><?php echo ($event_subtitle) ?></div>
+            <div class="whatson-featured__content">
+                <div class="whatson-featured__heading">
+                    <div class="whatson-featured__title"><?php echo ($event_title) ?></div>
+                    <div class="whatson-featured__subtitle"><?php echo ($event_subtitle) ?></div>
                 </div>
-                <div class="event-description"><?php echo ($event_description) ?></div>
+                <div class="whatson-featured__description"><?php echo ($event_description) ?></div>
             </div>
         </div>
 
-        <div class="menu-tabs-frame">
-            <div class="menu-tabs-container">
+        <div class="whatson-tabs">
+            <div class="whatson-tabs__list">
                 <?php
                     $taxonomy = 'event'; 
                     $terms = get_terms( array(
@@ -35,21 +35,18 @@ $icon = get_field('chevron-right');
                     ) );
 
                     if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : 
-                        
-                        echo '<a href="#" class="menu-tab" data-filter="all">All</a>';
-                        
+                        echo '<a href="#" class="whatson-tabs__tab" data-filter="all">All</a>';                        
                         foreach ( $terms as $term ) : ?>
-                            <a href="#" class="menu-tab" data-filter="<?php echo esc_attr( $term->slug ); ?>" >
+                            <a href="#" class="whatson-tabs__tab" data-filter="<?php echo esc_attr( $term->slug ); ?>" >
                                 <?php echo esc_html( $term->name ); ?>
                             </a>
                         <?php endforeach; 
-                        
                     endif; 
                 ?>
             </div>
         </div>
         
-        <div class="event-card-details">
+        <div class="whatson-featured__details">
             <?php
                 $args = array(
                     'post_type'      => 'event',
@@ -68,22 +65,22 @@ $icon = get_field('chevron-right');
                     $slug_string = implode( ' ', $term_slugs );
                     ?>
                     
-                    <div class="content-tab-card event-item" data-category="<?php echo esc_attr( $slug_string ); ?>">
-                        <div class="event-frame">
-                            <div class="calendar-frame">
-                                <div class="event-year"><?php echo $event_year?></div>
-                                <div class="event-date"><?php echo $event_start?>-<?php echo $event_end?></div>
-                                <div class="event-time"><?php echo $event_time?></div>
+                    <div class="event-row" data-category="<?php echo esc_attr( $slug_string ); ?>">
+                        <div class="event-row__inner">
+                            <div class="event-row__badge">
+                                <div class="event-row__year"><?php echo $event_year?></div>
+                                <div class="event-row__date"><?php echo $event_start?>-<?php echo $event_end?></div>
+                                <div class="event-row__time"><?php echo $event_time?></div>
                             </div>
-                            <div class="content-tab-card">
-                                <div class="event-title-frame">
-                                    <div class="event-title"><?php the_title(); ?></div>
-                                    <div class="event-subtitle"><?php echo esc_html( get_field('event-subtitle') ); ?></div>
+                            <div class="event-row__content">
+                                <div class="event-row__title-frame">
+                                    <div class="whatson-featured__title"><?php the_title(); ?></div>
+                                    <div class="whatson-featured__subtitle"><?php echo esc_html( get_field('event-subtitle') ); ?></div>
                                 </div>
-                                <div class="event-tab-description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
+                                <div class="whatson-featured__description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="learn-more-button">
-                                <p class="button-text">Learn More</p>
+                            <a href="<?php the_permalink(); ?>" class="whatson-events__button">
+                                <p class="text">Learn More</p>
                                 <?php if( $icon ): ?>
                                     <img src="<?php the_field('chevron-right'); ?>" />
                                 <?php endif; ?>

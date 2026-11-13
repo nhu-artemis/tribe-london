@@ -15,10 +15,10 @@ $related = new WP_Query([
 ]);
 ?>
 
-<section class="related-single-event-frame">
-    <div class="related-single-event-container">
-        <p class="title">YOU MIGHT ALSO LIKE</p>
-            <div class="card-frame-container">
+<div class="related-events">
+    <div class="related-events__inner">
+        <p class="related-events__title">YOU MIGHT ALSO LIKE</p>
+            <div class="related-events__list">
                 <?php if ( $related->have_posts() ) : ?>
                 <?php while ( $related->have_posts() ) : $related->the_post();
                     $event_start       = get_field('event-start');
@@ -29,21 +29,21 @@ $related = new WP_Query([
                     $event_image       = get_field('event-image');
                 ?>
 
-                <div class="card-frame">
-                    <div class="image-time-container">
+                <div class="related-events__card">
+                    <div class="related-events__media">
                         <div class="card-image">
                             <?php if( $event_image ): ?>
                                 <img src="<?php the_field('event-image'); ?>" />
                             <?php endif; ?>
                         </div>
                         <div class="calendar-position">           
-                            <div class="event-date"><?php echo $event_start?>-<?php echo $event_end?></div>
-                            <div class="event-time"><?php echo $event_time?></div>
+                            <div class="event-row__date"><?php echo $event_start?>-<?php echo $event_end?></div>
+                            <div class="event-row__time"><?php echo $event_time?></div>
                         </div> 
                     </div>
-                    <div class="content-wrapper">
-                        <p class="event-title"><?php echo $event_title?></p>
-                        <p class="event-description"><?php echo $event_description ?></p>
+                    <div class="related-events__content">
+                        <p class="whatson-featured__title"><?php echo $event_title?></p>
+                        <p class="whatson-featured__description"><?php echo $event_description ?></p>
                     </div>
                 </div>
                 <?php endwhile; ?>
@@ -51,11 +51,11 @@ $related = new WP_Query([
                 <?php endif; ?>
             </div>
         
-        <a class="see-all-button">
+        <a class="related-events__button">
             <p class="text">See all events</p>
             <?php if( $icon ): ?>
                 <img src="<?php the_field('chevron-right'); ?>" />
             <?php endif; ?>
         </a>
     </div>
-</section>
+</div>

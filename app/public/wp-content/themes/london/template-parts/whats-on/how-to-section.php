@@ -8,9 +8,9 @@ $section_title = get_field('how-to-title');
 $section_direction = get_field('how-to-direction');
 ?>
 
-<div class="how-to-frame">
-    <div class="how-to-title-container">
-        <div class="how-to-title"><?php echo $section_title; ?></div>
-        <div class="how-to-direction"><?php echo nl2br( $section_direction ); ?></div>
+<div class="how-to">
+    <div class="how-to__content">
+        <div class="how-to__title"><?php echo $section_title; ?></div>
+        <div class="how-to__direction"><?php echo nl2br( $section_direction ); ?></div>
     </div>
 </div>

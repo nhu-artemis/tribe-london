@@ -39,3 +39,343 @@
     src: url('../fonts/Trade Gothic Next LT Pro BdCn/Trade Gothic Next LT Pro BdCn.woff2') format('woff2'),
          url('../fonts/Trade Gothic Next LT Pro BdCn/Trade Gothic Next LT Pro BdCn.woff') format('woff');
 }
+
+.header__navbar {
+    display: flex;
+    padding: 1.25rem 5rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    background: var(--Neutral-Darkest, #000);
+}
+
+.header__logo-container {
+    width: 5.03544rem;
+    height: 3rem;
+    aspect-ratio: 47/28;
+}
+
+.header__menu-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-menu-class ul {
+    display: flex;
+    flex-direction: row;  
+    list-style: none;     
+    margin: 0;
+    padding: 0;
+    gap: 2rem;           
+}
+
+.header__menu-item {
+    font-family: Tanker;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 2.625rem */
+    text-transform: uppercase;
+}
+
+.header__menu-item a {
+    color: var(--Neutral-Light, #F3EEE8);
+    text-decoration: none;
+}
+
+.newsletter {
+    border: 3px solid var(--Neutral-Darkest, #000);
+    background: var(--Neutral-Darkest, #000);
+}
+
+.newsletter-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    padding: 2rem;
+}
+
+.newsletter__content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.newsletter__title {
+    color: var(--Main-Pink, #F08487);
+    text-align: center;
+    font-family: Tanker;
+    font-size: 3.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.newsletter__description {
+    color: var(--Neutral-Lightest, #FFF);
+    text-align: center;
+    font-family: "GT America Mono";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.newsletter-action__background {
+    --cell-w: 10px;
+    --cell-h: 3px;
+    box-sizing: border-box;
+    width: 400px;                 
+    max-width: 100%;
+    position: relative;
+    padding: 6px 6px; 
+    background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0)
+                0 0 / calc(var(--cell-w) * 2) calc(var(--cell-h) * 2);
+    border: 1px solid var(--Neutral-Darkest, #000);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.newsletter-action__inner {
+    background: var(--Neutral-Light, #F3EEE6);
+}
+
+
+.newsletter-action__frame form.custom-newsletter-form {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.newsletter-action__frame form.custom-newsletter-form input[type="email"] {
+    border: 2px solid var(--Neutral-Darkest, #1a1a1a);
+    box-sizing: border-box;
+    width: 18rem;
+    height: 2.7rem;
+    padding: 0 1rem;
+    outline: none;
+}
+
+.newsletter-action__frame input::placeholder {
+    color: var(--Neutral-Darkest, #000);
+    font-family: "GT America Mono";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.04375rem;
+}
+
+.newsletter-action__frame form.custom-newsletter-form button[type="submit"] {
+    box-sizing: border-box;
+    padding: 0 1.2rem; 
+    border: 2px solid var(--Neutral-Darkest, #1a1a1a);
+    background: #f28b8b;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: Tanker, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.newsletter-action__frame form.custom-newsletter-form button[type="submit"]:hover {
+    background: #e492a4;
+}
+
+
+.newsletter-action__frame .form-response-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 5px; 
+    text-align: center;
+    background: var(--Neutral-Light, #F3EEE8);
+    border: 2px solid var(--Neutral-Darkest, #1a1a1a); 
+    width: 100%;
+    padding: 0.2rem 0; 
+    box-sizing: border-box;
+    font-family: "GT America Mono", monospace;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    z-index: 10;
+}
+
+.footer-navbar {
+    background: var(--Neutral-Light, #F3EEE8);
+    display: flex;
+    padding: 5rem;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+.footer-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1 0 0;
+}
+
+.footer__logo-container {
+    width: 10rem;
+    height: 6rem;
+    aspect-ratio: 47/28;
+
+}
+
+.footer__menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.footer__menu-container ul {
+    list-style: none;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    gap: 0.5rem;
+}
+
+.footer__menu-item a {
+    color: var(--Neutral-Darkest, #000);
+    font-family: "GT America Mono";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.05rem;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.footer__newsletter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2.5rem;
+}
+
+
+.footer__content {
+    display: flex;
+    max-width: var(--Max-Width-max-width-medium, 35rem);
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+.footer__title {
+    color: var(--Neutral-Darkest, #000);
+    text-align: right;
+    font-family: Tanker;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.footer__description {
+    color: var(--Neutral-Darkest, #000);
+    text-align: right;
+    font-family: "GT America Mono";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.125rem */
+    letter-spacing: -0.0375rem;
+}
+
+.newsletter__container {
+    display: flex;
+    width: 25rem;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.newsletter__policy {
+    color: var(--Neutral-Darkest, #000);
+    font-family: "GT America Mono";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.0375rem;
+    margin: 0;
+}
+
+.footer__credits {
+    display: flex;
+    padding: 1.5rem 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    background: var(--Neutral-Darkest, #000);
+}
+
+.footer__credits-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.footer__credits-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer__credits-inner .tagline {
+    color: var(--Neutral-Light, #F3EEE8);
+    font-family: "GT America Mono";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.credit-menu-class ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__credits-inner a {
+    color: var(--Neutral-Light, #F3EEE8);
+    font-family: "GT America Mono";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+
+.footer__social-links {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.75rem;
+}

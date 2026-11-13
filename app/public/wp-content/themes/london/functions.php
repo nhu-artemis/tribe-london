@@ -23,6 +23,16 @@ function theme_enqueue_styles_scripts() {
     );
 
     wp_enqueue_style(
+      'london-whatson',
+      get_template_directory_uri() . '/assets/css/whatson.css',
+    );
+
+    wp_enqueue_style(
+      'london-single',
+      get_template_directory_uri() . '/assets/css/single-event.css',
+    );
+
+    wp_enqueue_style(
       'london-style',
       get_template_directory_uri() . '/style.css',
     );

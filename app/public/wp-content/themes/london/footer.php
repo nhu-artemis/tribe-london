@@ -8,14 +8,14 @@ $tagline = get_field('credits-tagline');
 
 <section class="footer-navbar">
     <div class="footer-frame">
-        <div class="footer-menu-container">
-            <div class="footer-logo-container">
+        <div class="footer__menu-container">
+            <div class="footer__logo-container">
                 <?php if( $footer_image ): ?>
                     <img src="<?php the_field('footer-logo'); ?>" />
                 <?php endif; ?>
             </div>
 
-            <div class="footer-menu-item">
+            <div class="footer__menu-item">
                 <?php
                     // Display the navigation menu for the footer
                     wp_nav_menu( 
@@ -27,15 +27,15 @@ $tagline = get_field('credits-tagline');
                 ?>
             </div>
         </div> 
-        <div class="footer-newsletter-container">
-            <div class="footer-content-container">
-                <p class="footer-title"><?php echo $footer_title; ?></p>
-                <p class="footer-description"><?php echo nl2br($footer_description); ?></p>            
+        <div class="footer__newsletter-container">
+            <div class="footer__content">
+                <p class="footer__title"><?php echo $footer_title; ?></p>
+                <p class="footer__description"><?php echo nl2br($footer_description); ?></p>            
             </div>
-            <div class="newsletter-container">
-                <div class="newsletter-action-background">
-                    <div class="newsletter-action-container">
-                        <div class="newsletter-action-frame">
+            <div class="newsletter__container">
+                <div class="newsletter-action__background">
+                    <div class="newsletter-action__container">
+                        <div class="newsletter-action__frame">
                                 <form class="custom-newsletter-form">
                                     <input type="email" class="newsletter-email" name="email" placeholder="Enter your email" required />
                                     <button type="submit" class="newsletter-submit-btn">SUBSCRIBE</button>
@@ -44,15 +44,15 @@ $tagline = get_field('credits-tagline');
                         </div>
                     </div>
                 </div>  
-                <p class="newsletter-policy"><?php echo $policy; ?></p> 
+                <p class="newsletter__policy"><?php echo $policy; ?></p> 
             </div>   
         </div>           
     </div>    
 </section>
 
-<section class="footer-credits">
-    <div class="footer-credits-row">
-        <div class="footer-credits-container">
+<section class="footer__credits">
+    <div class="footer__credits-row">
+        <div class="footer__credits-inner">
             <div class="tagline"><?php echo $tagline; ?></div>
             <?php
                 wp_nav_menu( 
@@ -63,7 +63,7 @@ $tagline = get_field('credits-tagline');
                 );
             ?>
         </div>
-        <div class="social-link">
+        <div class="footer__social-links">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/Facebook.png' ); ?>" alt="Facebook">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/Instagram.png' ); ?>" alt="Instagram">
             <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/icons/LinkedIn.png' ); ?>" alt="LinkedIn">

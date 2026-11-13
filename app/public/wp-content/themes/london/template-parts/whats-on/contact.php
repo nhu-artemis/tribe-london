@@ -11,17 +11,17 @@ $contact_description = get_field('contact-description');
 $icon = get_field('chevron-right'); 
 ?>
 
-<div class="contact-frame">
-    <div class="contact-container">
+<div class="whatson-contact">
+    <div class="whatson-contact__inner">
         <?php if( $contact_image ): ?>
-            <img class="contact-image" src="<?php the_field('contact-image'); ?>" />
+            <img class="whatson-contact__image" src="<?php the_field('contact-image'); ?>" />
         <?php endif; ?>
-        <div class="contact-title-container">
+        <div class="whatson-contact__content">
             <div class="contact-title"><?php echo $contact_title; ?></div>
             <div class="contact-description"><?php echo $contact_description; ?></div>
         </div>
-        <a class="contact-button">
-            <p class="button-text">Contact Our Event Team</p>
+        <a class="whatson-contact__button">
+            <p class="text">Contact Our Event Team</p>
             <?php if( $icon ): ?>
                 <img src="<?php the_field('chevron-right'); ?>" />
             <?php endif; ?>

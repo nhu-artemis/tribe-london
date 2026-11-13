@@ -14,30 +14,30 @@ $event_tagline = get_field('event-tagline');
 $icon = get_field('chevron-right');
 ?>
 
-<div class="info-single-event-frame">
-    <div class="info-frame">
-        <div class="time-location-container">
-            <div class="calendar-frame">
-                <div class="event-year"><?php echo $event_year?></div>
-                <div class="event-date"><?php echo $event_start?>-<?php echo $event_end?></div>
-                <div class="event-time"><?php echo $event_time?></div>
+<div class="info-event">
+    <div class="info-event__frame">
+        <div class="info-event__media">
+            <div class="event-row__badge">
+                <div class="event-row__year"><?php echo $event_year?></div>
+                <div class="event-row__date"><?php echo $event_start?>-<?php echo $event_end?></div>
+                <div class="event-row__time"><?php echo $event_time?></div>
             </div>
-            <div class="event-subtitle">Location: <br> <?php echo $event_subtitle?></div>
+            <div class="info-event__subtitle">Location: <br> <?php echo $event_subtitle?></div>
         </div>
-        <div class="title-container">
-            <div class="event-title"><?php echo $event_title ?></div>
+        <div class="info-event__content">
+            <div class="info-event__title"><?php echo $event_title ?></div>
         </div>
-        <div class="event-content"><?php echo $event_content?></div>
+        <div class="info-event__text"><?php echo $event_content?></div>
     </div>
-    <div class="booking-frame">
-        <div class="booking-background">
-            <div class="cta-background">
-                <div class="booking-info-text">Booking Information</div>
-                <div class="event-ad-frame">
+    <div class="info-event__booking-frame">
+        <div class="info-event__booking-background">
+            <div class="info-event__cta-background">
+                <div class="info-event__booking-title">Booking Information</div>
+                <div class="info-event__event-ad">
                     <div class="big-text"><?php echo nl2br($event_ad) ?> </div>
-                    <div class="small-text"><?php echo $event_tagline ?> </div>
+                    <div class="tagline"><?php echo $event_tagline ?> </div>
                 </div>
-                <button class="rsvp-button">
+                <button class="info-event__rsvp-button">
                     <p class="text">RSVP now</p>
                     <?php if( $icon ): ?>
                         <img src="<?php the_field('chevron-right'); ?>" />
