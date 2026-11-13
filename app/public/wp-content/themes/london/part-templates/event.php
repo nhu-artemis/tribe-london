@@ -8,10 +8,7 @@ $event_image = get_field('event-image');
 $event_title = get_field('event-title');
 $event_subtitle = get_field('event-subtitle');
 $event_description = get_field('event-description');
-$event_year = get_field('event-year');
-$event_start = get_field('event-start');
-$event_end = get_field('event-end');
-$event_time = get_field('event-time');
+$icon = get_field('chevron-right'); 
 ?>
 
 <div class="event-wrapper">
@@ -57,25 +54,20 @@ $event_time = get_field('event-time');
                 $args = array(
                     'post_type'      => 'event',
                     'posts_per_page' => -1,
-                    // 'tax_query' => array (
-                    //     array(
-                    //         'taxonomy' => 'event',
-                    //         'field' => 'slug',
-                    //         'terms' => array('fb-programming')
-                    //     )
-                    // )
                 );
                 $loop = new WP_Query($args);
                 while ( $loop->have_posts() ) {
                     $loop->the_post();
+                    $event_year = get_field('event-year');
+                    $event_start = get_field('event-start');
+                    $event_end = get_field('event-end');
+                    $event_time = get_field('event-time');
 
                     $post_terms = wp_get_post_terms(get_the_ID(), 'event');
-                    $term_slugs = array();
-                    foreach ($post_terms as $pt) {
-                        $term_slugs[] = $pt -> slug;
-                    }
-                    $slug_string = implode(' ', $term_slugs);
+                    $term_slugs  = ! is_wp_error( $post_terms ) ? wp_list_pluck( $post_terms, 'slug' ) : [];
+                    $slug_string = implode( ' ', $term_slugs );
                     ?>
+                    
                     <div class="content-tab-card event-item" data-category="<?php echo esc_attr( $slug_string ); ?>">
                         <div class="event-frame">
                             <div class="calendar-frame">
@@ -90,10 +82,15 @@ $event_time = get_field('event-time');
                                 </div>
                                 <div class="event-tab-description"><?php echo wp_kses_post( get_field('event-description') ); ?></div>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="learn-more-button"><p class="button-text">Learn More</p></a>
+                            <a href="<?php the_permalink(); ?>" class="learn-more-button">
+                                <p class="button-text">Learn More</p>
+                                <?php if( $icon ): ?>
+                                    <img src="<?php the_field('chevron-right'); ?>" />
+                                <?php endif; ?>
+                            </a>
                         </div>
                     </div>
-                    <?php
+                    <?
                 }
                 wp_reset_postdata()
             ?>

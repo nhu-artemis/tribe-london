@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the related events of single event content
  */
-$icon       = get_field('chevron-right'); 
+$icon = get_field('chevron-right'); 
 $current_id = get_the_ID();
 
 $related = new WP_Query([
@@ -21,7 +21,6 @@ $related = new WP_Query([
             <div class="card-frame-container">
                 <?php if ( $related->have_posts() ) : ?>
                 <?php while ( $related->have_posts() ) : $related->the_post();
-
                     $event_start       = get_field('event-start');
                     $event_end         = get_field('event-end');
                     $event_time        = get_field('event-time');

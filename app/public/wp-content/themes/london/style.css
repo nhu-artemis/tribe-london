@@ -870,7 +870,7 @@ body {
 }
 
 .img-placeholder {
-    height: 37.5rem;
+    height: auto;
     width: 100%;
 }
 
