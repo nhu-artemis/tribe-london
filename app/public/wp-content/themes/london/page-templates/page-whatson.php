@@ -17,11 +17,11 @@
 <?php while ( have_posts() ) : the_post(); ?>
 <?php get_header() ?>
     <?php the_content(); ?>
-    <?php get_template_part( 'part-templates/hero' ); ?>
-    <?php get_template_part( 'part-templates/section' ); ?>
-    <?php get_template_part( 'part-templates/event' ); ?>
-    <?php get_template_part( 'part-templates/how-to-section' )?>
-    <?php get_template_part( 'part-templates/contact' )?>
-    <?php get_template_part( 'part-templates/newsletter' )?>
+    <?php get_template_part( 'template-parts/whats-on/hero' ); ?>
+    <?php get_template_part( 'template-parts/whats-on/motto-section' ); ?>
+    <?php get_template_part( 'template-parts/whats-on/event' ); ?>
+    <?php get_template_part( 'template-parts/whats-on/how-to-section' )?>
+    <?php get_template_part( 'template-parts/whats-on/contact' )?>
+    <?php get_template_part( 'template-parts/global/newsletter' )?>
 <?php get_footer() ?>
 <?php endwhile; ?>

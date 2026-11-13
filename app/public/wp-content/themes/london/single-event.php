@@ -27,9 +27,9 @@ $event_time = get_field('event-time');
 <?php while ( have_posts() ) : the_post(); ?>
 <?php get_header()?>
     <?php the_content(); ?>
-    <?php get_template_part( 'part-templates/hero-single-event' ); ?>
-    <?php get_template_part( 'part-templates/info-single-event'); ?>
-    <?php get_template_part( 'part-templates/related-single-event'); ?>
-    <?php get_template_part( 'part-templates/newsletter'); ?>
+    <?php get_template_part( 'template-parts/single-event/hero-single-event' ); ?>
+    <?php get_template_part( 'template-parts/single-event/info-single-event'); ?>
+    <?php get_template_part( 'template-parts/single-event/related-single-event'); ?>
+    <?php get_template_part( 'template-parts/global/newsletter'); ?>
 <?php get_footer()?>
 <?php endwhile; ?>
