@@ -8,6 +8,7 @@
 $contact_image = get_field('contact-image');
 $contact_title = get_field('contact-title');
 $contact_description = get_field('contact-description');
+$icon = get_field('chevron-right'); 
 ?>
 
 <div class="contact-frame">
@@ -19,5 +20,11 @@ $contact_description = get_field('contact-description');
             <div class="contact-title"><?php echo $contact_title; ?></div>
             <div class="contact-description"><?php echo $contact_description; ?></div>
         </div>
+        <a class="contact-button">
+            <p class="button-text">Contact Our Event Team</p>
+            <?php if( $icon ): ?>
+                <img src="<?php the_field('chevron-right'); ?>" />
+            <?php endif; ?>
+        </a>
     </div>
 </div>

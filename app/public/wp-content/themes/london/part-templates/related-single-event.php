@@ -51,11 +51,11 @@ $related = new WP_Query([
                 <?php endif; ?>
             </div>
         
-        <button class="see-all-button">
+        <a class="see-all-button">
             <p class="text">See all events</p>
             <?php if( $icon ): ?>
                 <img src="<?php the_field('chevron-right'); ?>" />
             <?php endif; ?>
-        </button>
+        </a>
     </div>
 </section>
