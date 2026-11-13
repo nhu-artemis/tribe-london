@@ -22,7 +22,7 @@ $icon = get_field('chevron-right');
                 <div class="event-date"><?php echo $event_start?>-<?php echo $event_end?></div>
                 <div class="event-time"><?php echo $event_time?></div>
             </div>
-            <div class="event-subtitle">Location:<br> <?php echo $event_subtitle?></div>
+            <div class="event-subtitle">Location: <br> <?php echo $event_subtitle?></div>
         </div>
         <div class="title-container">
             <div class="event-title"><?php echo $event_title ?></div>
@@ -43,7 +43,7 @@ $icon = get_field('chevron-right');
                         <img src="<?php the_field('chevron-right'); ?>" />
                     <?php endif; ?>
                 </button>
-            </u>
+            </div>
         </div>
     </div>
 </div>

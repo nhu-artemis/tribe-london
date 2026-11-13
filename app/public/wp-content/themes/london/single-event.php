@@ -29,4 +29,7 @@ $event_time = get_field('event-time');
     <?php the_content(); ?>
     <?php get_template_part( 'part-templates/hero-single-event' ); ?>
     <?php get_template_part( 'part-templates/info-single-event'); ?>
+    <?php get_template_part( 'part-templates/related-single-event'); ?>
+    <?php get_template_part( 'part-templates/newsletter'); ?>
+<?php get_footer()?>
 <?php endwhile; ?>

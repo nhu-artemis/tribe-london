@@ -275,6 +275,7 @@ body {
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .event-subtitle {
@@ -294,6 +295,7 @@ body {
     font-weight: 400;
     line-height: 150%; /* 1.5rem */
     text-transform: uppercase;
+    margin: 0;
 }
 
 .event-card-details {
@@ -869,7 +871,7 @@ body {
 
 .img-placeholder {
     height: 37.5rem;
-    width: 90rem;
+    width: 100%;
 }
 
 .info-single-event-frame {
@@ -1020,4 +1022,112 @@ body {
     line-height: normal;
     text-transform: uppercase;
 
+}
+
+.related-single-event-frame {
+    background: var(--Neutral-Light, #F3EEE8);
+    display: flex;
+    padding: 5rem 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: -4.5rem;
+    align-self: stretch;
+}
+
+.related-single-event-container {
+    display: flex;
+    padding: 0 5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    align-self: stretch;
+}
+
+.related-single-event-container .title {
+    color: var(--Neutral-Darkest, #000);
+    text-align: center;
+    font-family: Tanker;
+    font-size: 3.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card-frame-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.card-frame {
+    display: flex;
+    height: 35rem;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 0;
+    border: 3px solid var(--Neutral-Darkest, #000);
+    background: var(--Neutral-Lightest, #FFF);
+    margin-bottom: 2rem;
+}
+
+.card-frame .card {
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2.5rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.image-time-container {
+    position: relative;
+}
+
+.image-time-container .card-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.image-time-container .calendar-position {
+    position: absolute;
+    width: 5rem;
+    top: 0rem;
+    right: 1rem;
+    z-index: 1;
+    padding: 4px 4px;
+    background: var(--Neutral-Darkest, #000);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1 0 0;
+    margin-top: 2rem;
+}
+
+.see-all-button {
+    display: flex;
+    width: 15rem;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 3px solid var(--Neutral-Darkest, #000);
+}
+
+.see-all-button .text{
+    color: var(--Neutral-Darkest, #000);
+    font-family: Tanker;
+    font-size: 1.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
 }
