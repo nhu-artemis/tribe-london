@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const tabs = document.querySelectorAll('.menu-tab');
-    const events = document.querySelectorAll('.event-item');
+    const tabs = document.querySelectorAll('.whatson-tabs__tab');
+    const events = document.querySelectorAll('.event-row');
 
     function applyFilter(eventCategory) {
         tabs.forEach(t => t.classList.toggle('active', t.dataset.filter === eventCategory));

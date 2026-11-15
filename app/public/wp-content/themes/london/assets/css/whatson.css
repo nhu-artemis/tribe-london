@@ -244,10 +244,6 @@
     gap: 1rem;
 }
 
-.menu-tab.active {
-    background: var(--Main-Pink, #F08487);
-}
-
 .event-row {
     display: flex;
     flex-direction: column;
@@ -308,6 +304,16 @@
     text-transform: uppercase;
     align-self: flex-end;
 }
+
+.event-row.hidden {
+    display: none;
+}
+
+.whatson-tabs__tab.active {
+    background: var(--Main-Pink, #F08487);
+}
+
+
 
 .event-row__title-frame{
     display: flex;
