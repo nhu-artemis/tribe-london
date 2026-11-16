@@ -72,7 +72,6 @@
 
 .header__menu-item {
     font-family: Tanker;
-    font-size: 1.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150%; /* 2.625rem */
@@ -81,7 +80,14 @@
 
 .header__menu-item a {
     color: var(--Neutral-Light, #F3EEE8);
+    font-size: 1.75rem;
     text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+   .header__menu-item a {
+        font-size: 1.25rem;
+   } 
 }
 
 .newsletter {
@@ -135,8 +141,7 @@
     background: conic-gradient(#fff 25%, #000 0 50%, #fff 0 75%, #000 0)
                 0 0 / calc(var(--cell-w) * 2) calc(var(--cell-h) * 2);
     border: 1px solid var(--Neutral-Darkest, #000);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 .newsletter-action__inner {
@@ -318,6 +323,10 @@
     line-height: normal;
     letter-spacing: -0.0375rem;
     margin: 0;
+}
+
+newsletter__policy a {
+    color: var(--Neutral-Darkest, #000);
 }
 
 .footer__credits {

@@ -65,6 +65,13 @@
     line-height: 0.85;
 }
 
+@media (max-width: 1024px) {
+    .whatson-hero__subtitle {
+        font-size: 8rem;
+    }
+}
+
+
 .whatson-hero__description {
     color: var(--Neutral-Darkest, #000);
     font-family: 'GT America Mono', monospace; 
@@ -149,8 +156,14 @@
 
 .whatson-featured {
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .whatson-featured {
+        gap: 5rem;
+    }
 }
 
 .whatson-featured__image {
@@ -159,21 +172,24 @@
     aspect-ratio: 613/409;
 }
 
+@media (max-width: 1024px) {
+    .whatson-featured__image {
+        height: 15rem;
+        aspect-ratio: 673/401;
+    }
+}
+
 .whatson-featured__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 2rem;
-    flex: 1 0 0;
 }
 
 
 .whatson-featured__heading {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    align-self: stretch;
 }
 
 .whatson-featured__title {
@@ -235,6 +251,13 @@
     line-height: 1.62475rem; /* 108.315% */
 }
 
+@media (max-width: 1024px) {
+    .whatson-tabs__list {
+        font-size: 1.25rem;
+    }
+}
+
+
 .whatson-tabs__tab {
     border: 2px solid var(--Neutral-Dark, #605A5B);
     color: var(--Neutral-Darkest, #000);
@@ -265,6 +288,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
+    align-items: center;
     padding: 0.5rem 1.5rem;
     width: 120px;
     height: 120px;  
@@ -312,8 +337,6 @@
 .whatson-tabs__tab.active {
     background: var(--Main-Pink, #F08487);
 }
-
-
 
 .event-row__title-frame{
     display: flex;
@@ -433,6 +456,9 @@
 }
 
 .whatson-contact__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     width: 100%;
     z-index: 2;
 }
@@ -445,6 +471,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .whatson-contact__content .contact-title {
+        font-size: 2.6rem;
+    }
 }
 
 .whatson-contact__content .contact-description {

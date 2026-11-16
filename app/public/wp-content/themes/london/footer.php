@@ -44,10 +44,8 @@ $tagline = get_field('credits-tagline');
                         </div>
                     </div>
                 </div>  
-                <p class="newsletter__policy"><?php echo $policy; ?></p> 
-            </div>   
-        </div>           
-    </div>    
+                <p class="newsletter__policy">By subscribing you agree with our <a href="<?php echo esc_url( get_privacy_policy_url() ); ?>">Privacy Policy</a>
+            </div>    
 </section>
 
 <section class="footer__credits">
